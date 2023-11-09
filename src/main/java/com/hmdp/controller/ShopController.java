@@ -33,7 +33,9 @@ public class ShopController {
      */
     @GetMapping("/{id}")
     public Result queryShopById(@PathVariable("id") Long id) {
-        return Result.ok(shopService.getById(id));
+//        return Result.ok(shopService.getById(id));
+//        业务搬到service里
+        return shopService.queryById(id);
     }
 
     /**
